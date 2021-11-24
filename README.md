@@ -1,5 +1,3 @@
 # My Diary App
 
-## Author:
-
-### Micah Bala
+## Author: Micah Bala

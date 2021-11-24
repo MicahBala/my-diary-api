@@ -20,6 +20,7 @@ app.use("/api", authRoute);
 app.use("/api/users/", usersRoute);
 app.use("/api/notes/", notesRoute);
 
-app.listen("5000", () => {
+const port = 5000;
+app.listen(process.env.PORT || port, () => {
   console.log("Backend Running...");
 });
