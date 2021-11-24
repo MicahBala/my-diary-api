@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 const authRoute = require("./routes/auth");
 const usersRoute = require("./routes/users");
 const notesRoute = require("./routes/notes");
-import cors from "cors";
+// import cors from "cors";
 
 dotenv.config();
 app.use(express.json());
