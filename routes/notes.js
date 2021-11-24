@@ -18,6 +18,15 @@ router.get("/", async (req, res) => {
   if (owner) {
     try {
       const notes = await Notes.find({ owner });
+      console.log(notes);
+      if (notes.length === 0) {
+        res.status(401).json({
+          status: "Error",
+          message: "Cant find notes for this user",
+        });
+        return;
+      }
+
       res.status(200).json({
         status: "Success",
         notes,
@@ -28,7 +37,7 @@ router.get("/", async (req, res) => {
   } else {
     res.status(401).json({
       status: "Error",
-      message: "Cant find notes",
+      message: "Cant find notes for this user",
     });
   }
 });
